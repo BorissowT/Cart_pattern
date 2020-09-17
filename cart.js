@@ -25,9 +25,12 @@ $("#grey_cart_background").on("click", function(){
 })
 
 $(".add_to_cart").on("click", function(){
+  $(".alert_cart").stop();
+  $(".alert_cart").css({"opacity":"1","visibility":"hidden"});
+  $(".alert_cart").text($(this).prev().prev().text() + "added to cart!");
   $(".alert_cart").css({"visibility":"visible"});
   $(".alert_cart").animate({opacity: "-0"},3000,function(){
     $(this).css({"opacity":"1","visibility":"hidden"});
   });
-  $(".alert_cart").text($(this).prev().prev().text() + "added to cart!");
+  
 })
