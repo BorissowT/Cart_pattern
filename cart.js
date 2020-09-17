@@ -3,11 +3,11 @@ $("#cart_button").on("click",function(){
     $(this).attr("value","opened");
     $(".cart_container").css({"visibility":"visible"});
     $("#grey_cart_background").css({"visibility":"visible"});
-    $(".cart_container").animate({width:"+=800px",height:"+=550px"})
+    $(".cart_container").animate({width:"+=50%",height:"+=60%"})
   }
   else{
     $(this).attr("value", "closed");
-    $(".cart_container").animate({width:"-=800px",height:"-=550px"}, function(){$(this).css({"visibility":"hidden"});});
+    $(".cart_container").animate({width:"-=50%",height:"-=60%"}, function(){$(this).css({"visibility":"hidden"});});
     $("#grey_cart_background").css({"visibility":"hidden"});
   }
 })

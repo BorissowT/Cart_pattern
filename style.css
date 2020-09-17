@@ -109,7 +109,7 @@ flex-wrap: wrap;
 .cart_container{
   position: fixed;
   top: 100px;
-  left: 500px;
+  left: 30%;
   background-color: white;
   z-index: 2;
   overflow: hidden;
