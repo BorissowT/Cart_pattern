@@ -6,10 +6,18 @@ if ($('.smart-scroll').length > 0) { // check if element exists
     $(window).on('scroll', function() {
         scroll_top = $(this).scrollTop();
         if(scroll_top < last_scroll_top) {
-            $('.smart-scroll').removeClass('scrolled-down').addClass('scrolled-up');
+          $('.smart-scroll').removeClass('scrolled-down').addClass('scrolled-up');
+          if($(".alert_cart").attr("value")=="up"){
+            $(".alert_cart").attr("value","down");
+            $(".alert_cart").animate({"top":"+=60px"});
+        }
         }
         else {
-            $('.smart-scroll').removeClass('scrolled-up').addClass('scrolled-down');
+          $('.smart-scroll').removeClass('scrolled-up').addClass('scrolled-down');
+          if($(".alert_cart").attr("value")=="down"){
+                $(".alert_cart").attr("value","up");
+                $(".alert_cart").animate({"top":"-=60px"});
+            }
         }
         last_scroll_top = scroll_top;
         $(".product_info_button").each(function(){

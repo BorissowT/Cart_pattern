@@ -91,7 +91,12 @@ flex-wrap: wrap;
   border-radius: 5px;
 }
 
-#grey_cart_background{
+.products{
+  height: 75%;
+  overflow-y: scroll;
+  overflow-y: hidden;
+}
+.grey_cart_background{
   height: 100%;
   width: 100%;
   background-color: grey;
@@ -101,4 +106,41 @@ flex-wrap: wrap;
   visibility: hidden;
 }
 
+.cart_container{
+  position: fixed;
+  top: 100px;
+  left: 500px;
+  background-color: white;
+  z-index: 2;
+  overflow: hidden;
+  border-radius: 30px;
+  border: 2px solid rgb(49, 56, 56);
+  visibility: hidden;
+  padding: 2em;
+}
+
+.exit_cart{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-right: 3px;
+  height: 32px;
+  width: 32px;
+  border: 2px solid black;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.exit_cart:hover{
+  opacity: 0.5;
+}
+
+.add_to_cart{
+  color: white;
+  cursor: pointer;
+}
+
+.alert_cart{
+  z-index: 1;
+  visibility: hidden;
+}
 /** elements **/

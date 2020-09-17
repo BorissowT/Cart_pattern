@@ -12,11 +12,21 @@
     <nav class="navmenu smart-scroll">
       <div class="d-flex justify-content-between align-items-center">
           <div class="label ml-5">SHOP</div>
-          <div class="cart_button mr-5" id="cart_button"><img src="images/white-shopping-cart-icon-png-19.jpg" width="35px" height="25px"></div>
+          <div class="cart_button mr-5" id="cart_button" value="closed"><img src="images/white-shopping-cart-icon-png-19.jpg" width="35px" height="25px" ></div>
       </div>
     </nav>
+    <div class="alert alert-success alert_cart" value="down" role="alert"> added to Cart</div>
   </div>
-  <div id="grey_cart_background"></div>
+  <div id="grey_cart_background" class="grey_cart_background"></div>
+  <div class="cart_container">
+    <div class="d-flex justify-content-between align-items-center">
+      <h1>Cart</h1>
+      <div class="exit_cart"><img class="ml-1" src="images/close.png" width="20px" height="20px"></div>
+    </div>
+    <hr>
+    <div class="products"></div>
+    <hr>
+  </div>
   <div class="start_picture"><img src="images/groceries.jpg"></div>
   <div class="container">
     <div class="cards_container">
@@ -29,7 +39,7 @@
             <div class="product_info_button" id="product_info_button" value="down"><img id="product_info_picture" src="/images/Arrow-down.svg.png" height="15px" width="25px"></div>
           </div>
           <p class="card-text"></p>
-          <a href="#" class="btn btn-dark">Add to Cart</a>
+          <div class="btn btn-dark add_to_cart">Add to Cart</div>
         </div>
       </div>
         <div class="card" style="width: 18rem;">
@@ -41,7 +51,7 @@
               <div class="product_info_button" id="product_info_button" value="down"><img id="product_info_picture" src="/images/Arrow-down.svg.png" height="15px" width="25px"></div>
             </div>
             <p class="card-text"></p>
-            <a href="#" class="btn btn-dark">Add to Cart</a>
+            <div class="btn btn-dark add_to_cart">Add to Cart</div>
           </div>
         </div>
         <div class="card" style="width: 18rem;">
@@ -53,7 +63,7 @@
               <div class="product_info_button" id="product_info_button" value="down"><img id="product_info_picture" src="/images/Arrow-down.svg.png" height="15px" width="25px"></div>
             </div>
             <p class="card-text"></p>
-            <a href="#" class="btn btn-dark">Add to Cart</a>
+            <div class="btn btn-dark add_to_cart">Add to Cart</div>
           </div>
         </div>
         <div class="card" style="width: 18rem;">
@@ -65,7 +75,7 @@
               <div class="product_info_button" id="product_info_button" value="down"><img id="product_info_picture" src="/images/Arrow-down.svg.png" height="15px" width="25px"></div>
             </div>
             <p class="card-text"></p>
-            <a href="#" class="btn btn-dark">Add to Cart</a>
+            <div class="btn btn-dark add_to_cart">Add to Cart</div>
           </div>
         </div>
         <div class="card" style="width: 18rem;">
@@ -77,7 +87,7 @@
               <div class="product_info_button" id="product_info_button" value="down"><img id="product_info_picture" src="/images/Arrow-down.svg.png" height="15px" width="25px"></div>
             </div>
             <p class="card-text"></p>
-            <a href="#" class="btn btn-dark">Add to Cart</a>
+            <div class="btn btn-dark add_to_cart">Add to Cart</div>
           </div>
         </div>
         <div class="card" style="width: 18rem;">
@@ -89,7 +99,7 @@
               <div class="product_info_button" id="product_info_button" value="down"><img id="product_info_picture" src="/images/Arrow-down.svg.png" height="15px" width="25px"></div>
             </div>
             <p class="card-text"></p>
-            <a href="#" class="btn btn-dark">Add to Cart</a>
+            <div class="btn btn-dark add_to_cart">Add to Cart</div>
           </div>
         </div>
         <div class="card" style="width: 18rem;">
@@ -101,14 +111,10 @@
               <div class="product_info_button" id="product_info_button" value="down"><img id="product_info_picture" src="/images/Arrow-down.svg.png" height="15px" width="25px"></div>
             </div>
             <p class="card-text"></p>
-            <a href="#" class="btn btn-dark">Add to Cart</a>
+            <div class="btn btn-dark add_to_cart">Add to Cart</div>
           </div>
         </div>
-
     </div>
-  
-
-    
   </div>
   <script
   src="http://code.jquery.com/jquery-3.5.1.min.js"

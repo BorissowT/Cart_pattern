@@ -1,3 +1,33 @@
 $("#cart_button").on("click",function(){
-$("#grey_cart_background").css({"visibility":"visible"})
+  if($(this).attr("value") == "closed"){
+    $(this).attr("value","opened");
+    $(".cart_container").css({"visibility":"visible"});
+    $("#grey_cart_background").css({"visibility":"visible"});
+    $(".cart_container").animate({width:"+=800px",height:"+=550px"})
+  }
+  else{
+    $(this).attr("value", "closed");
+    $(".cart_container").animate({width:"-=800px",height:"-=550px"}, function(){$(this).css({"visibility":"hidden"});});
+    $("#grey_cart_background").css({"visibility":"hidden"});
+  }
+})
+
+$(".exit_cart").on("click", function(){
+  $("#cart_button").attr("value", "closed");
+  $(".cart_container").animate({width:"-=800px",height:"-=550px"}, function(){$(this).css({"visibility":"hidden"});});
+  $("#grey_cart_background").css({"visibility":"hidden"});
+})
+
+$("#grey_cart_background").on("click", function(){
+  $("#cart_button").attr("value", "closed");
+  $(".cart_container").animate({width:"-=800px",height:"-=550px"}, function(){$(this).css({"visibility":"hidden"});});
+  $("#grey_cart_background").css({"visibility":"hidden"});
+})
+
+$(".add_to_cart").on("click", function(){
+  $(".alert_cart").css({"visibility":"visible"});
+  $(".alert_cart").animate({opacity: "-0"},3000,function(){
+    $(this).css({"opacity":"1","visibility":"hidden"});
+  });
+  $(".alert_cart").text($(this).prev().prev().text() + "added to cart!");
 })
