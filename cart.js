@@ -1,9 +1,16 @@
 var myStorage = window.localStorage;
 
+var plus_product_function = function(elem){
+console.log($(".product_title",elem.parent().parent().parent().parent()).text());
+}
+var minus_product_function = function(elem){
+  console.log($(".product_title",elem.parent().parent().parent().parent()).text());
+}
+
 var fill_products_in_cart = function(){
- 
+  $(".products").empty();
   for(i=0;i<myStorage.length;i++){
-    var pruduct_frame =  $('<div class="product_in_cart"> <img class="border_solid_black" src="" width="112px" height="112px"> <div class="d-flex justify-content-between ml-2" style="width: 80%;"><div style="width: 100%;"> <h3 class="product_title mt-1 ml-1"></h3> <div class="d-flex justify-content-between"><h5 class="mx-1">Total amount:</h5><h5 class="total_amount"></h5></div><div class="d-flex justify-content-between"><h5 class="mx-1">Total price:</h5><h5 class="total_price"></h5></div></div></div></div>');
+    var pruduct_frame =  $('<div class="product_in_cart"><img class="border_solid_black" src="" width="112px" height="112px"><div class="d-flex justify-content-between ml-2" style="width: 80%;"><div style="width: 100%;"><h3 class="product_title mt-1 ml-1"></h3><div class="d-flex justify-content-between"><h5 class="mx-1">Total amount:</h5><div class="d-flex justify-content-between"><div class="mt-1 mr-1"><div id ="plus_product"class="plus_product d-flex justify-content-between"><img style="margin-left: -1px;" src="/images/arrow-up.png" height="9px" width="20px"></div><div id="minus_product" class="minus_product d-flex justify-content-between"><img style="margin-left: -1px;" src="/images/Arrow-down.svg.png" height="9px" width="20px"></div></div><h5 class="total_amount">2</h5></div></div><div class="d-flex justify-content-between"><h5 class="mx-1">Total price:</h5><h5 class="total_price"></h5></div></div></div></div>');
     pruduct_frame.attr("id","product_"+i)
     $(".products").append(pruduct_frame);
     var new_product = $("#product_"+i);
@@ -14,6 +21,12 @@ var fill_products_in_cart = function(){
     $(".total_price", new_product).text(product_json.price*product_json.amount + "$"+"("+product_json.price+ "$"+")");
     $(".total_amount", new_product).text(product_json.amount);
   }
+  $(".plus_product").on("click", function(){
+    plus_product_function($(this));
+  });
+  $(".minus_product").on("click", function(){
+    minus_product_function($(this));
+  });
 }
 
 var add_to_cart_save_in_storage = function(elem){

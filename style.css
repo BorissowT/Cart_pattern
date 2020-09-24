@@ -163,5 +163,31 @@ flex-wrap: wrap;
   visibility: hidden;
 }
 
+.plus_product{
+  background-color: rgb(226, 226, 226);
+  border: 1px solid black;
+  border-radius: 2px;
+  height: 10px;
+  width: 19px;
+  margin-bottom: 3px;
+}
+
+.minus_product{
+  background-color: rgb(226, 226, 226);
+  border: 1px solid black;
+  border-radius: 2px;
+  height: 10px;
+  width: 19px;
+  margin-bottom: 3px;
+}
+
+.plus_product:hover{
+  opacity: 0.5;
+}
+
+.minus_product:hover{
+  opacity: 0.5;
+}
+
 
 /** elements **/
