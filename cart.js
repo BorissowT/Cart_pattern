@@ -1,10 +1,29 @@
 var myStorage = window.localStorage;
 
 var plus_product_function = function(elem){
-console.log($(".product_title",elem.parent().parent().parent().parent()).text());
+  var product = $(".product_title",elem.parent().parent().parent().parent()).text();
+  const json = myStorage[product];
+  var new_product = JSON.parse(json);
+  new_product.amount++;
+  myStorage.setItem(new_product.name,JSON.stringify(new_product));
+  $(".total_amount", elem.parent().parent()).text(new_product.amount);
+  $(".total_price", elem.parents()).first().text(new_product.price*new_product.amount + "$"+"("+new_product.price+ "$"+")");
 }
 var minus_product_function = function(elem){
-  console.log($(".product_title",elem.parent().parent().parent().parent()).text());
+  var product = $(".product_title", elem.parent().parent().parent().parent()).text();
+  const json = myStorage[product];
+  var new_product = JSON.parse(json);
+  if(new_product.amount==1){
+    myStorage.removeItem(product);
+    elem.parents(".product_in_cart").remove();
+  }
+  else{
+    new_product.amount--;
+    myStorage.setItem(new_product.name,JSON.stringify(new_product));
+    $(".total_amount", elem.parent().parent()).text(new_product.amount);
+    $(".total_price", elem.parents()).first().text(new_product.price*new_product.amount + "$"+"("+new_product.price+ "$"+")");
+   }
+
 }
 
 var fill_products_in_cart = function(){
