@@ -100,7 +100,7 @@ flex-wrap: wrap;
 .products{
   overflow-y: hidden;
   overflow-x: hidden;
-  height: 75%;
+  height: 70%;
 }
 
 .product_in_cart{
@@ -189,5 +189,35 @@ flex-wrap: wrap;
   opacity: 0.5;
 }
 
+.remove_product{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-right: 3px;
+  height: 20px;
+  width: 20px;
+  border: 2px solid black;
+  border-radius: 5px;
+  cursor: pointer;
+  padding-left: 3px;
+  margin-top: 10px;
+}
 
+.remove_product:hover{
+  opacity: 0.5;
+}
+
+.order_button{
+  border: 2px solid black;
+  width: 9%;
+  height: 1.9em;
+  border-radius: 10px;
+  background-color: rgb(49, 56, 56);
+  font-size: 40px;
+  cursor: pointer;
+  color: white;
+}
+.order_button:hover{
+  opacity: 0.5;
+}
 /** elements **/
