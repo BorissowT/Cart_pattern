@@ -47,7 +47,7 @@ var count_total_price = function(){
 
 var fill_products_in_cart = function(){
   var products_field = $(".products");
-  // $(".cart_bottom").empty();
+  $(".cart_bottom").empty();
   products_field.empty();
   if(myStorage.length == 0){
     var empty_message = $("<h2>There is no products in the cart yet...</h2>");
