@@ -101,6 +101,12 @@ var add_to_cart_save_in_storage = function(elem){
 
 }
 
+var close_cart = function(){
+  $("#cart_button").attr("value", "closed");
+  $(".cart_container").animate({width:"-=55%",height:"-=60%"}, function(){$(this).css({"visibility":"hidden"});});
+  $("#grey_cart_background").css({"visibility":"hidden"});
+}
+
 $("#cart_button").on("click",function(){
   if($(this).attr("value") == "closed"){
     $(this).attr("value","opened");
@@ -114,22 +120,16 @@ $("#cart_button").on("click",function(){
     fill_products_in_cart();
   }
   else{
-    $(this).attr("value", "closed");
-    $(".cart_container").animate({width:"-=55%",height:"-=60%"}, function(){$(this).css({"visibility":"hidden"});});
-    $("#grey_cart_background").css({"visibility":"hidden"});
+    close_cart();
   }
 })
 
 $(".exit_cart").on("click", function(){
-  $("#cart_button").attr("value", "closed");
-  $(".cart_container").animate({width:"-=55%",height:"-=60%"}, function(){$(this).css({"visibility":"hidden"});});
-  $("#grey_cart_background").css({"visibility":"hidden"});
+    close_cart();
 })
 
 $("#grey_cart_background").on("click", function(){
-  $("#cart_button").attr("value", "closed");
-  $(".cart_container").animate({width:"-=55%",height:"-=60%"}, function(){$(this).css({"visibility":"hidden"});});
-  $("#grey_cart_background").css({"visibility":"hidden"});
+    close_cart();
 })
 
 $(".add_to_cart").on("click", function(){
