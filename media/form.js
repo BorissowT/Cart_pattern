@@ -1,3 +1,14 @@
-$(".order_button").on("click", function(){
-  console.log('hello')
-})
+var close_form = function(){
+  var form = $(".form").css({"visibility":"visible"});
+  form.attr("value","closed");
+  form.animate({width:"-=55%",height:"-=550px"}, function(){$(this).css({"visibility":"hidden"});});
+  form.css({"visibility":"hidden"});
+  $("#grey_cart_background").css({"visibility":"hidden"});
+}
+
+var open_form = function(){
+  $("#grey_cart_background").css({"visibility":"visible"});
+  var form = $(".form").css({"visibility":"visible"});
+  form.animate({width:"+=55%",height:"+=550px"});
+  form.attr("value","opened");
+}

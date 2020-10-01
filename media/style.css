@@ -55,7 +55,6 @@ flex-wrap: wrap;
   border-radius: 10px;
   cursor: pointer;
 }
-
 .cart_button:hover{
   opacity: 0.8;
 
@@ -76,9 +75,11 @@ flex-wrap: wrap;
   left: 0;
   z-index: 1030;
 }
+
 .scrolled-down{
    transform:translateY(-100%); transition: all 0.3s ease-in-out;
 }
+
 .scrolled-up{
    transform:translateY(0); transition: all 0.3s ease-in-out;
 }
@@ -100,7 +101,8 @@ flex-wrap: wrap;
 .products{
   overflow-y: hidden;
   overflow-x: hidden;
-  height: 15em;
+  min-height: 40%;
+  max-height: 60%;
 }
 
 .product_in_cart{
@@ -115,7 +117,9 @@ flex-wrap: wrap;
 
 .cart_container{
   max-width:55%;
-  max-height:80%;
+  min-height: 100px;
+  min-width: 700px;
+  max-height:550px;
   position: fixed;
   top: 100px;
   left: 30%;
@@ -136,7 +140,6 @@ flex-wrap: wrap;
   opacity: 0.6;
   visibility: hidden;
 }
-
 
 .exit_cart{
   display: flex;
@@ -184,7 +187,6 @@ flex-wrap: wrap;
 .plus_product:hover{
   opacity: 0.5;
 }
-
 .minus_product:hover{
   opacity: 0.5;
 }
@@ -202,7 +204,6 @@ flex-wrap: wrap;
   padding-left: 3px;
   margin-top: 10px;
 }
-
 .remove_product:hover{
   opacity: 0.5;
 }
@@ -219,5 +220,21 @@ flex-wrap: wrap;
 }
 .order_button:hover{
   opacity: 0.5;
+}
+
+.form{
+  max-width:55%;
+  min-height: 100px;
+  min-width: 700px;
+  max-height:550px;
+  position: fixed;
+  top: 100px;
+  left: 30%;
+  background-color: white;
+  z-index: 2;
+  border-radius: 30px;
+  border: 2px solid rgb(49, 56, 56);
+  visibility: hidden;
+  padding: 2em;
 }
 /** elements **/

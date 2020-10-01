@@ -77,9 +77,10 @@ var fill_products_in_cart = function(){
       var product_name = $(this).prev().text();
       remove_product(product_name);
     })
-    $(".cart_bottom").append($('<div style="width: 34em;"><div class="d-flex justify-content-between"><h2>TOTAL PRICE</h2><h2 id="total"></h2></div><div class="d-flex justify-content-between"><h5>total price with 10% taxes</h5><h5 id="total_with_taxes"></h5></div></div><div class="order_button"><p>BUY</p></div>'));
+    $(".cart_bottom").append($('<div style="width: 90%;"><div class="d-flex justify-content-between"><h2>TOTAL PRICE</h2><h2 id="total"></h2></div><div class="d-flex justify-content-between"><h5>total price with 10% taxes</h5><h5 id="total_with_taxes"></h5></div></div><div class="order_button"><p>BUY</p></div>'));
     $(".order_button").on("click", function(){
       close_cart();
+      open_form();
     });
     count_total_price();
   }
@@ -112,19 +113,22 @@ var close_cart = function(){
 }
 
 $("#cart_button").on("click",function(){
-  if($(this).attr("value") == "closed"){
+  if($(this).attr("value") == "closed" && $(".form").attr("value") == "closed"){
     $(this).attr("value","opened");
     $(".cart_container").css({"visibility":"visible"});
     $("#grey_cart_background").css({"visibility":"visible"});
-    $(".cart_container").animate({width:"+=55%",height:"+=80%"})
+    $(".cart_container").animate({width:"+=55%",height:"+=550px"})
     if(myStorage.length>3)
       $(".products").css({"overflow-y":"scroll"});
     else
       $(".products").css({"overflow-y":"hidden"});
     fill_products_in_cart();
   }
-  else{
+  else if ($(this).attr("value") == "opened" && $(".form").attr("value") == "closed"){
     close_cart();
+  }
+  else{
+    close_form();
   }
 })
 
@@ -134,6 +138,7 @@ $(".exit_cart").on("click", function(){
 
 $("#grey_cart_background").on("click", function(){
     close_cart();
+    close_form();
 })
 
 $(".add_to_cart").on("click", function(){
