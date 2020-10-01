@@ -100,7 +100,7 @@ flex-wrap: wrap;
 .products{
   overflow-y: hidden;
   overflow-x: hidden;
-  height: 70%;
+  height: 15em;
 }
 
 .product_in_cart{
@@ -209,7 +209,7 @@ flex-wrap: wrap;
 
 .order_button{
   border: 2px solid black;
-  width: 9%;
+  width: 2em;
   height: 1.9em;
   border-radius: 10px;
   background-color: rgb(49, 56, 56);
