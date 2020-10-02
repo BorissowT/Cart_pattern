@@ -40,9 +40,12 @@ var count_total_price = function(){
     const product_json = JSON.parse(json);
     total += product_json.amount*product_json.price;
   }
+  var total_with_taxes = Number.parseFloat(total*1.1).toFixed(2)
+  var total_with_shipping = parseFloat(total_with_taxes) + parseFloat(total_with_taxes*0.15);
   $("#total").text(total+"$");
-  $("#total_with_taxes").text(Number.parseFloat(total*1.1).toFixed(2)+"$");
-
+  $("#total_with_taxes").text(total_with_taxes+"$");
+  $("#total_form").text(total_with_shipping + "$");
+  $("#shipping").text(total_with_taxes*0.15+"$")
 }
 
 var fill_products_in_cart = function(){
