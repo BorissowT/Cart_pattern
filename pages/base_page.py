@@ -37,4 +37,12 @@ class BasePage:
 
         return True
 
+    def is_element_visible(self, how, what, timeout=4):
+        try:
+            WebDriverWait(self.browser, timeout).until(EC.invisibility_of_element((how, what)))
+        except TimeoutException:
+            return True
+
+        return False
+
 

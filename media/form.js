@@ -2,7 +2,6 @@ var close_form = function(){
   var form = $(".form").css({"visibility":"visible"});
   form.attr("value","closed");
   form.animate({width:"-=55%",height:"-=550px"}, function(){$(this).css({"visibility":"hidden"});});
-  form.css({"visibility":"hidden"});
   $("#grey_cart_background").css({"visibility":"hidden"});
 }
 
