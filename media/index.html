@@ -34,13 +34,42 @@
   </div>
 
   <div class="form" value="closed">
-    <div class="d-flex justify-content-between align-items-center">
+    <div class="d-flex justify-content-between align-items-center mt-0" style="height: 40px;">
       <h1>Form</h1>
       <div class="exit_form"><img class="ml-1" src="images/close.png" width="20px" height="20px"></div>
     </div>
-    <hr id="hr_before_inputs">
+    <hr>
+    <div class="inputs">
+      <div class="inputs_container">
+        <label class="align-self-start mb-0" for="name">Full name:</label>
+        <input class="input" id="name">
+        <label class="align-self-start mb-0" for="phone">Phone:</label>
+        <input class="input" id="phone">
+        <label class="align-self-start mb-0" for="country">Country:</label>
+        <input class="input" id="country">
+        <label class="align-self-start mb-0" for="city">City:</label>
+        <input class="input" id="city">
+        <label class="align-self-start mb-0" for="postal_code">Postal code:</label>
+        <input class="input" id="postal_code">
+      </div>
+    </div>
+    <hr>
+    <div class="d-flex">
+      <div style="width: 85%;">
+        <div class="d-flex justify-content-between">
+          <h5>TOTAL PRICE</h4>
+          <h5 id="total">20</h5>
+        </div>
+        <div class="d-flex justify-content-between">
+          <p>shipping</p>
+          <p id="shipping">10</p>
+        </div>
+      </div>
+      <div class="order_shipping">
+        <p class="mb-0">ORDER</p>
+      </div>
+    </div>
   </div>
-
   <div class="start_picture"><img src="images/groceries.jpg"></div>
   <div class="container">
     <div class="cards_container">
