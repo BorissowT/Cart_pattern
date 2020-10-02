@@ -118,7 +118,7 @@ $("#cart_button").on("click",function(){
     $(".cart_container").css({"visibility":"visible"});
     $("#grey_cart_background").css({"visibility":"visible"});
     $(".cart_container").animate({width:"+=55%",height:"+=550px"})
-    if(myStorage.length>3)
+    if(myStorage.length>=3)
       $(".products").css({"overflow-y":"scroll"});
     else
       $(".products").css({"overflow-y":"hidden"});

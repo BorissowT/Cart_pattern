@@ -217,6 +217,7 @@ flex-wrap: wrap;
   font-size: 40px;
   cursor: pointer;
   color: white;
+  margin-left: 10px;
 }
 .order_button:hover{
   opacity: 0.5;
