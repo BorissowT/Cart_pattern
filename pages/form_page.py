@@ -27,3 +27,6 @@ class FormPage(BasePage):
         cart_button = self.browser.find_element(*FormPageLocators.GRAY_BACKGROUND)
         cart_button.click()
         self.if_closed()
+
+    def close_form_with_close_button(self):
+        assert self.is_element_present(*FormPageLocators.CLOSE_BUTTON), "there is no close button"

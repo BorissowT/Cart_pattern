@@ -156,6 +156,21 @@ flex-wrap: wrap;
   opacity: 0.5;
 }
 
+.exit_form{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-right: 3px;
+  height: 32px;
+  width: 32px;
+  border: 2px solid black;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.exit_form:hover{
+  opacity: 0.5;
+}
+
 .add_to_cart{
   color: white;
   cursor: pointer;

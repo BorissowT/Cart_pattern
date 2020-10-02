@@ -18,3 +18,4 @@ class CartPageLocators:
 class FormPageLocators:
     FORM = (By.CSS_SELECTOR, ".form")
     GRAY_BACKGROUND = (By.CSS_SELECTOR, ".grey_cart_background")
+    CLOSE_BUTTON = (By.CSS_SELECTOR, ".exit_form")
