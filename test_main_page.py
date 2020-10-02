@@ -16,8 +16,8 @@ class TestOpenCart:
         main_page.open_cart()
         time.sleep(2)
         cart_page = CartPage(browser, link)
+        cart_page.should_be_cart_page()
         cart_page.close_cart_with_cart_button()
-        time.sleep(2)
 
     def test_if_cart_can_be_opened_and_closed_with_close_button(self, browser):
         main_page = MainPage(browser, link)
@@ -26,8 +26,8 @@ class TestOpenCart:
         main_page.open_cart()
         time.sleep(2)
         cart_page = CartPage(browser, link)
+        cart_page.should_be_cart_page()
         cart_page.close_cart_with_cart_button()
-        time.sleep(2)
 
     def test_if_cart_can_be_opened_and_closed_with_gray_background(self, browser):
         main_page = MainPage(browser, link)
@@ -36,5 +36,6 @@ class TestOpenCart:
         main_page.open_cart()
         time.sleep(2)
         cart_page = CartPage(browser, link)
+        cart_page.should_be_cart_page()
         cart_page.close_cart_with_cart_button()
-        time.sleep(2)
+

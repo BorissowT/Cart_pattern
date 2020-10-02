@@ -19,6 +19,8 @@ class MainPage(BasePage):
         cart_button = self.browser.find_element(*MainPageLocators.CART_BUTTON)
         cart_button.click()
 
-
+    def add_one_milk_to_cart(self):
+        add_milk_button = self.browser.find_element(*MainPageLocators.ADD_MILK_BUTTON)
+        add_milk_button.click()
 
 
