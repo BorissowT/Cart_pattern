@@ -44,8 +44,8 @@ var count_total_price = function(){
   var total_with_shipping = parseFloat(total_with_taxes) + parseFloat(total_with_taxes*0.15);
   $("#total").text(total+"$");
   $("#total_with_taxes").text(total_with_taxes+"$");
-  $("#total_form").text(total_with_shipping + "$");
-  $("#shipping").text(total_with_taxes*0.15+"$")
+  $("#total_form").text(total_with_shipping.toFixed(2) + "$");
+  $("#shipping").text((total_with_taxes*0.15).toFixed(2)+"$")
 }
 
 var fill_products_in_cart = function(){

@@ -297,4 +297,15 @@ flex-wrap: wrap;
   opacity: 0.5;
 }
 
+.validation_message{
+  height: 50px;
+  width: 100px;
+  background-color:rgb(243, 241, 238);
+  border: 1px solid rgb(49, 56, 56);
+  border-radius: 5px;
+  position: absolute;
+  left: none;
+  top: none;
+  z-index: 1;
+}
 /** elements **/
