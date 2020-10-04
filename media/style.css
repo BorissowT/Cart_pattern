@@ -298,8 +298,8 @@ flex-wrap: wrap;
 }
 
 .validation_message{
-  height: 50px;
-  width: 100px;
+  height: 40px;
+  width: auto;
   background-color:rgb(243, 241, 238);
   border: 1px solid rgb(49, 56, 56);
   border-radius: 5px;
@@ -307,5 +307,11 @@ flex-wrap: wrap;
   left: none;
   top: none;
   z-index: 1;
+}
+
+.warning_sign{
+  position: absolute;
+  left: none;
+  top: none;
 }
 /** elements **/
